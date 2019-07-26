@@ -9,8 +9,11 @@ p{
     font-size: 14px;
     color: rgb(70, 70, 70);
 }
+a {
+    text-decoration: none;
+}
 header{
-    min-height: 855px;;
+    margin-bottom: 30px;
 }
 body{
     
@@ -22,6 +25,7 @@ body{
     justify-content: space-between;
     background-color: rgb(75, 191, 230);
     min-height: 40px;
+    flex-wrap: wrap;
 
 }
 .center{
@@ -36,36 +40,56 @@ body{
 ul{
    display:flex;
    justify-content: space-between;
+   flex-wrap: wrap;
    list-style: none;
+   padding: 0;
+   margin: 0;
 }
-li{
-    padding-right: 15px;
+#top-menu-t li a{
+    padding: 10px 15px;
+    color:white;
+    display: block;
+    
 }
+#top-menu-t li:last-child a{
+    padding-right: 0;
+    
+    
+}
+
 #middle-header{
     display: flex;
     justify-content: space-between;
     min-height: 100px;
     padding-right:0;
+    align-items: center;
+    flex-wrap: wrap;
 }
 #logo{
     width:150px;
     height:100%;
-    margin-top: 40px;
+    
     
 }
 #mh-menu{
     width: 45%;
     font-weight: 800;
     color: rgb(75, 75, 75);
-    margin-top: 27px;
+    
 }
-#mh-menu li{
-    margin-right: 10px;
+
+#mh-menu li a{
+    padding: 0 15px;
+    color: rgb(75, 75, 75);
+    text-decoration: none;
 }
 
 #main-banner{
     height: 400px;
     width:100%;    
+}
+#bottom-header{
+    position: relative;
 }
 #title{
     background-color: gray;
@@ -74,22 +98,21 @@ li{
     line-height: 2em;
     font-size: 26px;
     position:absolute;
-    margin:200px 0 0 60px;  
+    top: 40%;
+    left: 5%;
+    z-index: 5;  
+    
 }
 #banner-img{
-    position:absolute;
+    
     width: 100%;
-    height: 80%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
 }
-#bottom-header{
-    min-height:820px;
-}
+
 #search{
-    margin-top: 30px;
     max-width:173px;
     width:100%;
     position: relative;
@@ -106,26 +129,38 @@ li{
 }
 #sale{
     width: 20%;
-    margin-top:25px;
+    
 }
 #cart{
     width:10%;
-    margin-top:25px;
+    
 }
 
 #main-area{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 #f-products{
-    width: 80%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
 }
-.title-2{
+#f-products .image{
+    width: 33.33%;
+    margin: 40px 0;
+}
+
+#f-products img{
+    width: 100%;
+}
+
+#f-products h2{
     font-family: 'Open-Sans', sans-serif;
-    
     font-weight: 500;
     font-size: 22px;
     text-transform: uppercase;
+    width: 100%;
 }
 
 .main-images{
@@ -135,8 +170,12 @@ li{
     margin-bottom: 100px;
 }
 #sidebar{
-    width:20%;
-    margin-left: 50px;   
+    width:30%;
+    padding-left: 50px;   
+}
+
+#sidebar img{
+    max-width: 100%;
 }
 #sidebar-img{
     position: absolute;
@@ -176,6 +215,7 @@ li{
 #newsl input{
     margin-top:20px;
     height: 30px;
+    max-width: 100%;
 }
 footer{
     background-color: #4cb1ca;
@@ -183,6 +223,7 @@ footer{
 #sub-footer{
     display:flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 #shipping, #call{
     width: 50%;
@@ -190,12 +231,12 @@ footer{
     justify-content: space-between;
 }
 #shipping img, #call img{
-    width: 15%;
-    margin: 15px;
+    
+    margin: 15px 0 15px 0;
     
 }
 #shipping div, #call div{
-    width: 85%;
+    
     font-size: 19px;
     text-transform: uppercase;
     margin: auto;
@@ -209,12 +250,15 @@ footer{
 }
 #main-footer-bg{
     background-color: #39a0b9;
+    
 }
 #main-footer{
     
     display:flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 45px 0;
+    
 }
 
 #contact{
@@ -226,6 +270,7 @@ footer{
 #bottom-footer{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: #0b4b5a;
 }
 #copyright{
@@ -242,13 +287,18 @@ footer{
 #twitter .footer-text{
     margin-bottom: 5px;
 } 
-.twit-info{
+#twit-text{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+.twit-info{
+    /* display: flex;
+    justify-content: space-between; */
+    flex-wrap: wrap;
 }
 .twit-info p{
-    width: 80%;
-    padding: 0 0 0 15px;
+    
     color: white;
     line-height: 1.5em;
 }
@@ -294,7 +344,7 @@ footer{
     text-decoration: none;
     color: white;
     border-right: 1px solid white;
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 20px;
     font-size: 13px;
 }
 #bottom-menu ul li:last-child a{
@@ -316,27 +366,8 @@ footer{
 .text-img{
     font-size: 14px;
 }
-.cart-icon{
-    width:10%;
-}
-#image-3 .product-text{
-    margin-top: 10px;
-}
-#image-5 .product-text{
-    margin-top: 20px;
-}
-#image-8 .product-text{
-    margin-top: 10px;
-}
-#image-9 .product-text{
-    margin-top: 10px;
-}
-#image-11 .product-text{
-    margin-top: 20px;
-}
-#image-12 .product-text{
-    margin-top: 16px;
-}
+
+
 
 
 @media(max-width: 1070px){
@@ -344,10 +375,103 @@ footer{
         padding: 0 20px;
         flex-direction: column;
         justify-content: center;
-        
     }
+    #mh-menu, #search, #sale{
+        width: auto;
+    }
+    ul{
+        justify-content: center;
+    }
+    #logo, #search{
+        margin: 15px 0;
+    }
+    #sale{
+        margin-bottom: 15px;
+    }
+
+
+}
+@media(max-width: 900px){
+    #f-products .image{
+        width: 50%;
+    }
+    #f-products{
+        width: 60%;
+    }
+    #sidebar{
+        width: 40%;
+    }
+    
+
 }
 
-@media(max-width: 978px){
-    
+@media(max-width: 625px){
+    #top-header{
+        padding-top: 15px;
+    }
+    #title{
+        font-size: 16px;
+    }
+    #main-footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    #facebook, #twitter, #info, #contact{
+        width: auto;   
+        padding-bottom: 40px; 
+        text-align: center;   
+    }
+    #twit-info{
+        flex-wrap: wrap;
+        
+    }
+    #twit-icon{
+        padding-top: 15px;
+    }
+    #bottom-footer{
+        padding-bottom: 20px;
+    }
+    #copyright{
+        text-align: center;
+        width: 100%;
+    }
+    #bottom-menu a{
+        padding-left: 20px;
+    }
+    #shipping, #call{
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+@media(max-width: 550px){
+    #main-area{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #f-products{
+        width: 100%;
+    }
+    #sidebar{
+    width: 100%;
+       justify-content: center;
+       padding-left: 0; 
+    }
+    #side-featured{ 
+        display: flex;   
+        justify-content: center;
+    }
+    #sidebar-btn{
+        left:0;
+        height: 40px;
+        padding-bottom: 35px;
+    }
+}
+@media(max-width: 400px){
+
+    #f-products .image{
+        width: 100%;
+    }
 }
